@@ -1,4 +1,3 @@
-
 package bo.sigep.xml.utils;
 
 import org.xml.sax.SAXException;
@@ -23,7 +22,6 @@ public class XmlValidate {
         schema = factory.newSchema(XmlValidate.class.getResource(xsd));
         Validator validator = schema.newValidator();
         validator.validate(new StreamSource(new StringReader(xml)));
-
     }
 
     public ValidateResult validateFormated(String xml, String xsd) throws IOException, SAXException {
@@ -38,7 +36,7 @@ public class XmlValidate {
             resultado.setEstado("ERROR");
             resultado.setLineaError(ex.getLineNumber());
             resultado.setColumnaError(ex.getColumnNumber());
-            resultado.setMensajeError(ex.getMessage().substring(ex.getMessage().indexOf(":") + 2)); 
+            resultado.setMensajeError(ex.getMessage().substring(ex.getMessage().indexOf(":") + 2));
             return resultado;
         } catch (SAXException e) {
             throw e;

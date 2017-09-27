@@ -12,7 +12,6 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-
 /**
  *
  * @author jheredia

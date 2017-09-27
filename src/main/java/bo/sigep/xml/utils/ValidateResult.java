@@ -5,6 +5,7 @@ package bo.sigep.xml.utils;
  * @author jheredia
  */
 public class ValidateResult {
+
     private String estado;
     private long lineaError;
     private long columnaError;
